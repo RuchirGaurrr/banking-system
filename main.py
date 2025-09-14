@@ -49,8 +49,8 @@ class BankApp:
         while True:
             password = getpass.getpass(Fore.CYAN + "Enter a password: ").strip()
             confirm = getpass.getpass(Fore.CYAN + "Confirm your password: ").strip()
-            if not password:
-                print(Fore.RED + "Password cannot be empty.")
+            if not password or not confirm:
+                print(Fore.RED + "Passwords cannot be empty.")
                 continue
             if password != confirm:
                 print(Fore.RED + "Passwords don’t match. Try again.")

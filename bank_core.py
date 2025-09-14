@@ -25,14 +25,11 @@ class Bank: # manages all accounts and handles the persistence.
                 self.accounts.append(account)
         
     def save_accounts(self):
-        print("DEBUG: Accounts to save =", [a.username for a in self.accounts])
-
         line = [f"{account.account_no},{account.username},{account.password},{account.name},{account.balance}" for account in self.accounts]
         with open(self.accounts_file,"w") as file:
             file.write("#account_no,username,password,name,balance\n")
             file.write("\n".join(line)+"\n")
-        print("DEBUG: Accounts added to file")
-    
+        
     def log_transaction(self, txn):
         with open(self.transaction_file,"a") as file:
             file.write(txn.to_csv()+"\n")
