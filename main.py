@@ -12,7 +12,7 @@ class BankApp:
     
     def run(self):
         while True:
-            print(Fore.CYAN + Style.BRIGHT + "\n========== WELCOME TO PYTHON BANK ==========")
+            print(Fore.CYAN + Style.BRIGHT + "\n========== WELCOME TO RUCHIR'S BANK ==========")
             print(Fore.YELLOW + "1. Create Account")
             print(Fore.YELLOW + "2. Login")
             print(Fore.YELLOW + "3. Exit")
